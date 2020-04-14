@@ -32,5 +32,5 @@ cat << EOF | curl --data-binary @- ${pushgateway}${instance_ip}/type/${instance_
     disk_used_percentage ${disk[3]}
 EOF
 EOT
-chmod 600 /home/hadoop/emr-montoring-metrics.sh
+chmod 700 /home/hadoop/emr-montoring-metrics.sh
 (crontab -l 2>/dev/null; echo "*/5 * * * * /home/hadoop/emr-montoring-metrics.sh $1") | crontab -
