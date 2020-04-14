@@ -23,7 +23,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -61,7 +61,7 @@
         {
           "expr": "memory_total",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -109,7 +109,7 @@
       }
     },
     {
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 9,
         "w": 6,
@@ -149,7 +149,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(memory_used{exported_job=\"emr-blog\",type=\"slave\"})/sum(memory_total{exported_job=\"emr-blog\",type=\"slave\"}) * 100",
+          "expr": "sum(memory_used{job=\"emr-blog\",type=\"slaves\"})/sum(memory_total{job=\"emr-blog\",type=\"slaves\"}) * 100",
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
@@ -157,12 +157,12 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Memory Used % ( All Slaves )",
+      "title": "Memory Used % ( All slavess )",
       "transparent": true,
       "type": "gauge"
     },
     {
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 9,
         "w": 6,
@@ -203,7 +203,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(disk_used_size{exported_job=\"emr-blog\",type=\"slave\"})/sum(disk_size{exported_job=\"emr-blog\",type=\"slave\"}) * 100",
+          "expr": "sum(disk_used_size{job=\"emr-blog\",type=\"slaves\"})/sum(disk_size{job=\"emr-blog\",type=\"slaves\"}) * 100",
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
@@ -211,7 +211,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Disk /mnt Used % ( All Slaves )",
+      "title": "Disk /mnt Used % ( All slavess )",
       "transparent": true,
       "type": "gauge"
     },
@@ -220,7 +220,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -258,7 +258,7 @@
         {
           "expr": "memory_free",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -310,7 +310,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -347,7 +347,7 @@
       "targets": [
         {
           "expr": "cpu_sys_load",
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -399,7 +399,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -437,7 +437,7 @@
         {
           "expr": "memory_used",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -489,7 +489,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -526,7 +526,7 @@
       "targets": [
         {
           "expr": "cpu_user_load",
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -578,7 +578,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -616,7 +616,7 @@
         {
           "expr": "disk_size",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -668,7 +668,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -705,7 +705,7 @@
       "targets": [
         {
           "expr": "cpu_idle_load",
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -757,7 +757,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -795,7 +795,7 @@
         {
           "expr": "disk_used_size",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -847,7 +847,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -885,7 +885,7 @@
         {
           "expr": "disk_used_percentage",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
@@ -937,7 +937,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Thanos",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -975,7 +975,7 @@
         {
           "expr": "disk_available_size",
           "intervalFactor": 1,
-          "legendFormat": "{{ type }} {{ exported_instance }}",
+          "legendFormat": "{{ type }} {{ instance }}",
           "refId": "A"
         }
       ],
